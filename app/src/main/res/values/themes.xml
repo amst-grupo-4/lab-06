@@ -13,4 +13,13 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.Grupo4_TA3_InicioSesionFirebase.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Grupo4_TA3_InicioSesionFirebase.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Grupo4_TA3_InicioSesionFirebase.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
