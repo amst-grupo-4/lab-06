@@ -120,9 +120,24 @@
     </LinearLayout>
 
     <Button
-    android:id="@+id/btn_logout"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:onClick="cerrarSesion"
-    android:text="Cerrar Sesion" />
-    </LinearLayout>
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:background="#FFC107"
+        android:gravity="center"
+        android:onClick="cerrarSesion"
+        android:text="Cerrar Sesion"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_registros"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:background="#FFC107"
+        android:gravity="center"
+        android:onClick="irRegistros"
+        android:paddingTop="5dp"
+        android:layout_marginTop="8dp"
+        android:text="Ver Registros"
+        android:textSize="20sp" />
+</LinearLayout>

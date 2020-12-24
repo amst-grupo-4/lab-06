@@ -46,15 +46,9 @@ public class PerfilUsuario extends AppCompatActivity {
         String photo = info_user.get("user_photo");
         Picasso.with(getApplicationContext()).load(photo).into(imv_photo);
 
-
-
-
-
-
-
         iniciarBaseDeDatos();
-        leerTweets();
-        escribirTweets(info_user.get("user_name"));
+        //leerTweets();
+        //escribirTweets(info_user.get("user_name"));
     }
 
     public void cerrarSesion(View view){
@@ -68,7 +62,7 @@ public class PerfilUsuario extends AppCompatActivity {
     public void iniciarBaseDeDatos(){
         db_reference = FirebaseDatabase.getInstance().getReference().child("Grupo");
     }
-    public void leerTweets(){
+    /* public void leerTweets(){
         db_reference.child("Grupo 0").child("tweets").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -93,5 +87,10 @@ public class PerfilUsuario extends AppCompatActivity {
         tweets.setValue(tweet);
         tweets.child(tweet).child("autor").setValue(autor);
         tweets.child(tweet).child("fecha").setValue(fecha);
+    }*/
+
+    public void irRegistros(View view){
+        Intent intent = new Intent(this, registros.class);
+        startActivity(intent);
     }
 }
