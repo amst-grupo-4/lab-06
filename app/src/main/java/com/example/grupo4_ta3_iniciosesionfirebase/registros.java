@@ -19,7 +19,7 @@ public class registros extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registros);
-        db_reference = FirebaseDatabase.getInstance().getReference().child("Grupo4");
+        db_reference = FirebaseDatabase.getInstance().getReference().child("Grupo4/Registros");
         leerRegistros();
     }
     public void leerRegistros(){
@@ -39,17 +39,17 @@ public class registros extends AppCompatActivity {
     }
     public void mostrarRegistrosPorPantalla(DataSnapshot snapshot){
         LinearLayout contTemp = (LinearLayout) findViewById(R.id.ContenedorTemp);
-        LinearLayout contHum = (LinearLayout) findViewById(R.id.ContenedorHum);
+        LinearLayout contAxi = (LinearLayout) findViewById(R.id.ContenedorAxi);
 
-        String tempVal = String.valueOf(snapshot.child("payload_fields").child("temperatura").getValue());
-        String humVal = String.valueOf(snapshot.child("payload_fields").child("humedad").getValue());
+        String tempVal = String.valueOf(snapshot.child("temperatura").getValue());
+        String humVal = String.valueOf(snapshot.child("humedad").getValue());
 
         TextView temp = new TextView(getApplicationContext());
         temp.setText(tempVal+"C");
         contTemp.addView(temp);
 
-        TextView hum = new TextView(getApplicationContext());
-        hum.setText(humVal+"%");
-        contHum.addView(hum);
+        TextView axi = new TextView(getApplicationContext());
+        axi.setText(humVal+"%");
+        contAxi.addView(axi);
     }
 }
