@@ -41,15 +41,15 @@ public class registros extends AppCompatActivity {
         LinearLayout contTemp = (LinearLayout) findViewById(R.id.ContenedorTemp);
         LinearLayout contAxi = (LinearLayout) findViewById(R.id.ContenedorAxi);
 
-        String tempVal = String.valueOf(snapshot.child("temperatura").getValue());
-        String humVal = String.valueOf(snapshot.child("humedad").getValue());
+        String tempVal = String.valueOf(snapshot.child("temp").getValue());
+        String axiVal = String.valueOf(snapshot.child("axi").getValue());
 
         TextView temp = new TextView(getApplicationContext());
         temp.setText(tempVal+"C");
         contTemp.addView(temp);
 
         TextView axi = new TextView(getApplicationContext());
-        axi.setText(humVal+"%");
+        axi.setText(axiVal);
         contAxi.addView(axi);
     }
 }

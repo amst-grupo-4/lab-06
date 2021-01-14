@@ -29,15 +29,15 @@
                 android:text="Temperatura" />
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/TituloHumedad1"
+            android:id="@+id/Axis1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
             <TextView
-                android:id="@+id/TituloHumedad2"
+                android:id="@+id/Axis2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Humedad" />
+                android:text="Axis" />
         </LinearLayout>
     </LinearLayout>
 
